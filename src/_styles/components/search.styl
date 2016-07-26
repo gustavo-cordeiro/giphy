@@ -1,0 +1,41 @@
+.search
+  cf();
+  center();
+  position: relative;
+
+  &__submit,
+  &__input-container
+    height: 80px;
+
+  &__input-container
+    width: 100%;
+    box-sizing: border-box;
+
+  &__input
+    width: 100%;
+    height: 100%;
+    color: $color-palet.fuscous-gray;
+
+    font-size: 2em;
+    font-weight: 300;
+    padding: $spaces.x-small 100px $spaces.x-small $spaces.small;
+
+    &::-webkit-input-placeholder
+      font-size: 1em;
+      color: rgba($color-palet.fuscous-gray, .25);
+
+
+  &__submit
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 80px;
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    color: rgba(0,0,0,0);
+    background: url("../images/search.png") 100%;
+
+  &:hover
+    .search__submit
+      background-image: url("../images/search_hover.gif");

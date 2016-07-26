@@ -1,0 +1,62 @@
+.giphy
+  cf();
+  center();
+
+  &__item,
+  &__description
+    transition: all .3s ease-in-out;
+
+  &__item
+    span(3/12);
+    overflow: hidden;
+    position: relative;
+    transform: scale(0);
+
+    height: 10em;
+    border-bottom: .2em solid;
+    margin-bottom: $spaces.x-small;
+
+    &:nth-child(even)
+      background-color: $color-palet.carnation;
+      border-color: $color-palet.carnation;
+
+    &:nth-child(odd)
+      background-color: $color-palet.tulip-tree;
+      border-color: $color-palet.tulip-tree;
+
+    &:nth-child(5n+1)
+      background-color: $color-palet.domino;
+      border-color: $color-palet.domino;
+
+    &:nth-child(3n+1)
+      background-color: $color-palet.peach-yellow;
+      border-color: $color-palet.peach-yellow;
+
+    +mobile()
+      span(1/1);
+      height: 20em;
+
+  &__description
+    margin: 0;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    font-size: .9em;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translateY(100%);
+    padding: $spaces.x-small $spaces.small;
+    background: rgba($color-palet.fuscous-gray, .8);
+
+    .giphy__item:hover &
+      transform: translateY(0);
+
+  &__img
+    align();
+    height: 100%;
+    min-width: 100%;
+
+  &.animation
+    .giphy__item
+      transform: scale(1);

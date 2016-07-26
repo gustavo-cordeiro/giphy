@@ -1,0 +1,12 @@
+/*
+* Convert PX in EM
+*/
+to-em($value, $base = $default-font-size, $rem = false) {
+  $unit = unit($value);
+
+  if ($unit is 'px') {
+    return unit($value/$base, ($rem ? 'rem' : 'em'));
+  } else {
+    return unit($value, $unit);
+  }
+}

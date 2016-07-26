@@ -1,0 +1,5 @@
+ul.giphy
+  each gif in giphy
+    li.giphy__item
+      p.giphy__description #{gif.description}
+      img.giphy__img(src=gif.url alt=gif.description)
